@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kompressor - Kompresi Gambar Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Kompressor</h1>
+            <p>Kompres gambar dengan mudah, cepat, dan gratis</p>
+        </header>
+        
+        <div class="upload-section">
+            <h2>Unggah Gambar</h2>
+            <div id="uploadArea" class="upload-area">
+                <p>Seret gambar ke sini atau klik untuk memilih</p>
+                <input type="file" id="fileInput" style="display: none;" accept="image/*">
+                <button id="selectBtn" class="btn">Pilih Gambar</button>
+            </div>
+            
+            <div class="settings">
+                <label for="qualitySlider">Kualitas: <span id="qualityValue">80</span>%</label>
+                <input type="range" min="10" max="100" value="80" class="slider" id="qualitySlider">
+                
+                <label>Pilih Ukuran Target (KB):</label>
+                <div class="size-presets">
+                    <div class="size-preset" data-size="50">50 KB</div>
+                    <div class="size-preset" data-size="100">100 KB</div>
+                    <div class="size-preset active" data-size="200">200 KB</div>
+                    <div class="size-preset" data-size="500">500 KB</div>
+                </div>
+            </div>
+            
+            <button id="compressBtn" class="btn" disabled>Kompres Gambar</button>
+        </div>
+        
+        <div id="resultsSection" class="results-section">
+            <h2>Hasil Kompresi</h2>
+            <div class="image-container">
+                <h3>Gambar Terkompresi</h3>
+                <img id="compressedImage" src="" alt="Gambar Terkompresi">
+                <p>Ukuran: <span id="compressedSize">0</span> KB</p>
+            </div>
+            <a id="downloadBtn" class="btn" download="compressed-image">Unduh Gambar</a>
+        </div>
+        
+        <footer>
+            <p>Kompressor &copy; 2025 - Semua proses dilakukan di perangkat Anda</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
